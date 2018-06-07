@@ -252,7 +252,7 @@ window.addEventListener('load', () => {
 <!-- end _includes/video.html -->
 ```
 
-#### 7.2 Include from example
+#### 8.2 Include from example
 
 ```
 ---
@@ -276,7 +276,7 @@ title: Video include example
 ```
 
 
-#### 7.3 Get png files
+#### 8.3 Get png files
 
 ```
 img/minus.png
