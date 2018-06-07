@@ -1,0 +1,61 @@
+
+<!-- begin _includes/video.html -->
+<!-- include.id = {{include.id}} -->
+<!-- include.url = {{include.url}} -->
+
+<div class="expand">
+
+  <input id="video{{ include.id }}button1" 
+         style="display: block;" 
+         type="image" 
+         src="/img/play.png" 
+         height="25" 
+         width="25"/>
+
+  <input id="video{{ include.id }}button2" 
+         style="display: none;" 
+         type="image" 
+         src="/img/minus.png" 
+         height="25" 
+         width="25"/>   
+
+</div>
+
+<iframe id="insertvideo{{ include.id }}" 
+        style="display: none;" 
+        width="660" 
+        height="380" 
+        src="" 
+        frameborder="0" 
+        allowfullscreen>
+</iframe>
+
+<script>
+    
+window.addEventListener('load', () => {
+
+    let video     = document.getElementById('insertvideo{{ include.id }}');
+    let videobtn1 = document.getElementById('video{{ include.id }}button1');
+    let videobtn2 = document.getElementById('video{{ include.id }}button2');
+
+    videobtn1.addEventListener('click', (function () {
+        return function () {
+            video.setAttribute('src', "{{ include.url }}");
+            video.style.display = 'block';
+            videobtn1.style.display = 'none';
+            videobtn2.style.display = 'block';
+        }
+    })());
+
+    videobtn2.addEventListener('click', (function () {
+        return function () {
+            video.style.display = 'none';
+            videobtn1.style.display = 'block';
+            videobtn2.style.display = 'none';
+            video.setAttribute('src', '');
+        }
+    })());
+});
+</script>
+
+<!-- end _includes/video.html -->

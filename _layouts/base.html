@@ -1,0 +1,38 @@
+<!-- [_layouts/base.html] Begin -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mathforprogramming | {{page.title}}</title>
+
+    <!-- DEFAULT GITHUB PAGES CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css"/>
+
+    <!-- MATHJAX LIBRARY CONFIG -->
+    <script>
+    // Config mathjax - @doc http://docs.mathjax.org/en/latest/configuration.html#using-plain-javascript - 12.01.18
+    window.MathJax = {
+        tex2jax: {
+            inlineMath: [["$","$"], ["\\(","\\)"]],
+            processEscapes: true
+        }  
+    };
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</head>
+<body>
+<div class="container-lg px-3 my-5 markdown-body">
+
+    <h1> mathforprogramming | {{page.title}}</h1>
+
+    <!-- [_layouts/base.html] Content begin -->
+{{ content }}
+    <!-- [_layouts/base.html] Content end -->
+
+</div>
+</body>
+</html>
+<!-- [_layouts/base.html] End  -->
