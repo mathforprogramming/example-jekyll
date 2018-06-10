@@ -10,7 +10,6 @@ title: Basic page example
 let myfunc = (e => console.log("Hello world"))()
 ```
 
-
 ### Python code
 
 ```python
@@ -27,3 +26,21 @@ int main() {
     std::cout << "Hello world!";
 }
 ```
+
+### Go code
+```go
+package main
+import ("fmt")
+
+func main() {
+    fmt.Println("Hello world")
+}
+```
+
+```
+  asd fdsfdsf  
+
+   asd fds f f sdf sdf dsfd sf dsf sd
+   asdfd
+```
+
